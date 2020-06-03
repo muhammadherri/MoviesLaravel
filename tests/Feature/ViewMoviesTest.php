@@ -2,11 +2,14 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
+use Livewire\Livewire;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ViewMoviesTest extends TestCase
 {
+    /** @test */
     public function the_main_page_shows_correct_info()
     {
         Http::fake([
@@ -304,5 +307,4 @@ class ViewMoviesTest extends TestCase
                 ]
             ], 200);
     }
-    
 }
